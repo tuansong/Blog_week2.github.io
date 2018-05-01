@@ -21,7 +21,9 @@ The following **optional** features are implemented:
 * [ ] Include a 'Get in touch' form for guests to submit enquiries (Sign up button)
 * [ ] Bootstrap carousel for banner
 * [ ] Add a dropdown on top navigation
+
 The following **additional** features are implemented:
+
 * [ ] Add <iframe> element
 
 ## Video Walkthrough
