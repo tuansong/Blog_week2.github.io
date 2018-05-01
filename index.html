@@ -11,6 +11,8 @@
         crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="http://images.clipartpanda.com/soccer-ball-clipart-black-and-white-9Tz6bqnTE.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Sport world</title>
 </head>
@@ -49,13 +51,51 @@
                         <a class="nav-link text-uppercase" href="#">Shop</a>
                     </li>
                     <li class="nav-item ml-3 pt-1">
-                        <button type="button" class="btn btn-success">Sign up now</button>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Sign up now</button>
+
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputUserName1">User name</label>
+                            <input type="text" class="form-control" id="exampleInputUserName1" placeholder="Enter your user name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I agree with <a href="#">Terms and conditions</a></label>
+                        </div>
 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -97,27 +137,22 @@
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
-            </a> -->
+            </a> -->`
         </div>
     </header>
 
     <section>
-        <button class="btn btn-default mb-2" onclick="openBar()">Side bar</button>
-        <aside class="side-bar btn-group-vertical">
-            <button type="button" class="btn btn-danger" onclick="closeBar()">X</button>
-            <button type="button" class="btn btn-secondary">Soccer</button>
-            <button type="button" class="btn btn-secondary">Basketball</button>
-            <button type="button" class="btn btn-secondary">Gym and fitness</button>
-        </aside>
+        <div class="fixed-side-bar">
+                <button class="btn bg-transparent" onclick="openBar()"><i class="fas fa-bars" style="font-size: 50px"></i></button>
+                <aside class="side-bar btn-group-vertical">
+                    <button type="button" class="btn btn-danger" onclick="closeBar()">X</button>
+                    <button type="button" class="btn btn-secondary">Features</button>
+                    <button type="button" class="btn btn-secondary">About</button>
+                    <button type="button" class="btn btn-secondary">Shop</button>
+                </aside>
+        </div>
         <div class="container">
             <h3 class="text-white">Our features: </h3>
-            <!-- <button class="btn btn-default mb-2" onclick="openBar">Side bar</button>
-        <aside class="side-bar btn-group-vertical">
-            <button type="button" class="btn btn-danger">X</button>
-            <button type="button" class="btn btn-secondary">Soccer</button>
-            <button type="button" class="btn btn-secondary">Basketball</button>
-            <button type="button" class="btn btn-secondary">Gym and fitness</button>
-        </aside> -->
             <div class="card-deck">
                 <div class="card mb-4 box-shadow">
                     <img class="card-img-top" src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/31D7/production/_101095721_gettyimages-952785476.jpg"
@@ -192,7 +227,8 @@
                     <div class="card-body">
                         <h5 class="card-title">World cup 2018</h5>
                         <p class="card-text">World Cup 2018 schedule: All the groups, fixtures, kick-off times and venues for the tournament in
-                            Russia</p>
+                            Russia
+                        </p>
                         <p class="card-text">
                             <small class="text-muted">Last updated 3 mins ago</small>
                         </p>
@@ -235,7 +271,19 @@
         </div>
     </div>
     <footer>
-        <p class="text-success">Powered by TusoTR</p>
+        <p>Powered by TusoTR</p>
+        <div class="container text-center">
+            <h5>Like us on</h5>
+            <a href="#">
+                <i class="fab fa-facebook-square" style="font-size: 36px"></i>
+            </a>
+            <a href="#">
+                    <i class="fab fa-twitter-square" style="font-size: 36px"></i>
+            </a>
+            <a href="#">
+                    <i class="fab fa-linkedin" style="font-size: 36px"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="blog.js"></script>

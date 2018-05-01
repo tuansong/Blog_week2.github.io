@@ -73,6 +73,13 @@ body {
     }
 }
 
+@media (max-width:444px) {
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
 .container .row .shop-info {
     display: flex;
     flex-direction: column;
@@ -80,17 +87,21 @@ body {
 }
 
 footer {
-    height: 50px;
     background-color: white;
+}
+
+.fixed-side-bar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 9999;
 }
 
 .side-bar {
     display: none;
     position: absolute;
-    top: 537px;
     height: 100%;
     width: 150px;
-    z-index: 9999;
 }
 
 section .btn {
